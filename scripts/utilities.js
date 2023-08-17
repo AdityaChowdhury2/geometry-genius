@@ -12,7 +12,7 @@ function getValueByElementId(elementId) {
 }
 
 function setAndShowResult(elementId, value) {
-    if (value) {
+    if (typeof value === 'number') {
         const element = document.getElementById(elementId);
         element.innerText = value;
         element.parentElement.classList.remove('opacity-0');
