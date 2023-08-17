@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+
+            margin: 0;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body class="font-inter">
+    <header>
+
+    </header>
+    <main class="container">
+        <!-- Container -->
+        <div class="flex flex-col xl:flex-row gap-5 p-4">
+            <!-- Shape Container -->
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Triangle Card -->
+                <div class="card bg-base-100 shadow-xl rounded-md">
+                    <figure class="px-10 pt-10">
+                        <img src="./images/triangle.png" alt="Triangle" />
+                    </figure>
+                    <div class="card-body items-center">
+                        <h2 class="card-title ">Triangle</h2>
+                        <p>Area (A) = 0.5 X b X h</p>
+                        <p class="text-center">
+                            <input onfocus="hideResult(this)"
+                                class="outline-none ml-4 bg-gray-200 rounded-md px-3 py-1 w-1/4" placeholder="base"
+                                type="number" name="" id="triangle-base">
+                            <span class="ml-2">cm</span>
+                            <input onfocus="hideResult(this)"
+                                class="outline-none ml-4 bg-gray-200 rounded-md px-3 py-1 w-1/4" placeholder="height"
+                                type="number" name="" id="triangle-height">
+                            <span class="ml-2">cm</span>
+                        </p>
+                        <p class="opacity-0">Area : <span id="triangle-area">0</span>cm<sup>2</sup> </p>
+                        <div class="card-actions w-full mt-8">
+                            <button onclick="calculateTriangleArea()"
+                                class="btn bg-sky-400 hover:bg-sky-500 text-white text-center w-full capitalize">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Rectangle Card -->
+                <div class="card bg-base-100 shadow-xl rounded-md">
+                    <figure class="px-10 pt-10">
+                        <img src="./images/rectangle.png" alt="Rectangle" />
+                    </figure>
+                    <div class="card-body items-center">
+                        <h2 class="card-title ">Rectangle</h2>
+                        <p>Area (A) = w X l</p>
+                        <p class="text-center">
+                            <input onfocus="hideResult(this)"
+                                class="outline-none ml-4 bg-gray-200 rounded-md px-3 py-1 w-1/4" placeholder="width"
+                                type="number" name="" id="rectangle-width">
+                            <span class="ml-2">cm</span>
+                            <input onfocus="hideResult(this)"
+                                class="outline-none ml-4 bg-gray-200 rounded-md px-3 py-1 w-1/4" placeholder="length"
+                                type="number" name="" id="rectangle-length">
+                            <span class="ml-2">cm</span>
+                        </p>
+                        <p class="opacity-0">Area : <span id="rectangle-area">0</span>cm<sup>2</sup> </p>
+                        <div class="card-actions w-full mt-8">
+                            <button onclick="calculateRectangleArea()"
+                                class="btn bg-sky-400 hover:bg-sky-500 text-white text-center w-full capitalize">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Parallelogram Card -->
+                <div class="card bg-base-100 shadow-xl rounded-md">
+                    <figure class="px-10 pt-10">
+                        <img src="./images/parallelogram.png" alt=" Parallelogram" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Triangle</h2>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Area Calculator -->
+            <div class=" xl:w-[400px] border-2 h-[400px] p-8 rounded-md">
+                <h4 class="text-2xl underline text-center underline-offset-4">Area Calculator</h4>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./scripts/utilities.js"></script>
+    <script src="./scripts/area-calculator.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                },
+                container: {
+                    center: true,
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
