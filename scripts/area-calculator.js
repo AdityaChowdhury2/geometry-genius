@@ -54,3 +54,16 @@ function calculateRectangleArea() {
     const area = length * width;
     setAndShowResult('rectangle-area', area);
 }
+
+function calculateParallelogramArea() {
+    const base = getValueByElementId('parallelogram-base');
+    const height = getValueByElementId('parallelogram-height');
+    const area = base * height;
+    setAndShowResult('parallelogram-area', area);
+}
+function calculateEllipseArea() {
+    const firstAxis = getValueByElementId('ellipse-first-axis');
+    const secondAxis = getValueByElementId('ellipse-second-axis');
+    const area = 3.1416 * firstAxis * secondAxis;
+    setAndShowResult('ellipse-area', area.toFixed(2));
+}

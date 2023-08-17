@@ -2,8 +2,9 @@ function getValueByElementId(elementId) {
     const element = document.getElementById(elementId);
     const elementValueString = element.value;
     const value = parseFloat(elementValueString);
-    if (!value) {
-        alert('Please enter a valid input')
+    if (isNaN(value)) {
+        alert('Please enter a valid input');
+        return;
     }
     else {
         return value;
