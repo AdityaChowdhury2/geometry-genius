@@ -12,9 +12,9 @@ function getValueByElementId(elementId) {
 }
 
 function setAndShowResult(elementId, value) {
-    if (typeof value === 'number') {
+    if (value) {
         const element = document.getElementById(elementId);
-        element.innerText = value;
+        element.innerText = value.toFixed(2);
         element.parentElement.classList.remove('opacity-0');
     }
 }

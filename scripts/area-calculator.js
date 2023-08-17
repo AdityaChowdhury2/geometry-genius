@@ -65,5 +65,5 @@ function calculateEllipseArea() {
     const firstAxis = getValueByElementId('ellipse-first-axis');
     const secondAxis = getValueByElementId('ellipse-second-axis');
     const area = 3.1416 * firstAxis * secondAxis;
-    setAndShowResult('ellipse-area', area.toFixed(2));
+    setAndShowResult('ellipse-area', area);
 }
