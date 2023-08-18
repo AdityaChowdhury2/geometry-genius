@@ -44,7 +44,7 @@
                     </figure>
                     <div class="card-body items-center">
                         <h2 class="card-title ">Triangle</h2>
-                        <p>Area (A) = 0.5 X b X h</p>
+                        <p class="text-sm m-2">Area (A) = 0.5 X b X h</p>
                         <p class="text-center">
                             <input onfocus="hideResult(this)"
                                 class="outline-none ml-4 bg-gray-200 rounded-md px-3 py-1 w-1/4" placeholder="base"
@@ -69,7 +69,7 @@
                     </figure>
                     <div class="card-body items-center">
                         <h2 class="card-title ">Rectangle</h2>
-                        <p>Area (A) = w X l</p>
+                        <p class="text-sm m-2">Area (A) = w X l</p>
                         <p class="text-center">
                             <input onfocus="hideResult(this)"
                                 class="outline-none ml-4 bg-gray-200 rounded-md px-3 py-1 w-1/4" placeholder="width"
@@ -94,7 +94,7 @@
                     </figure>
                     <div class="card-body items-center">
                         <h2 class="card-title ">Parallelogram</h2>
-                        <p>Area (A) = b X h</p>
+                        <p class="text-sm m-2">Area (A) = b X h</p>
                         <p class="text-center">
                             <input onfocus="hideResult(this)"
                                 class="outline-none ml-4 bg-gray-200 rounded-md px-3 py-1 w-1/4" placeholder="base"
@@ -119,15 +119,15 @@
                     </figure>
                     <div class="card-body items-center">
                         <h2 class="card-title ">Rhombus</h2>
-                        <p>Area (A) = b X h</p>
+                        <p class="text-sm m-2">Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
                         <p class="text-center">
                             <input onfocus="hideResult(this)"
-                                class="outline-none ml-4 bg-gray-200 rounded-md px-3 py-1 w-1/4" placeholder="base"
-                                type="number" name="" id="rhombus-base">
+                                class="outline-none ml-4 bg-gray-200 rounded-md px-3 py-1 w-1/4" placeholder="diagonal"
+                                type="number" name="" id="rhombus-first-diagonal">
                             <span class="ml-2">cm</span>
                             <input onfocus="hideResult(this)"
-                                class="outline-none ml-4 bg-gray-200 rounded-md px-3 py-1 w-1/4" placeholder="height"
-                                type="number" name="" id="rhombus-height">
+                                class="outline-none ml-4 bg-gray-200 rounded-md px-3 py-1 w-1/4" placeholder="diagonal"
+                                type="number" name="" id="rhombus-second-diagonal">
                             <span class="ml-2">cm</span>
                         </p>
                         <p class="opacity-0">Area : <span id="rhombus-area">0</span>cm<sup>2</sup> </p>
@@ -144,16 +144,16 @@
                     </figure>
                     <div class="card-body items-center">
                         <h2 class="card-title ">Pentagon</h2>
-                        <p>Area (A) = b X h</p>
+                        <p class="text-sm m-2">Area (A) = (5/4) X s<sup>2</sup> X (1 / tan(π/5))</p>
                         <p class="text-center">
                             <input onfocus="hideResult(this)"
-                                class="outline-none ml-4 bg-gray-200 rounded-md px-3 py-1 w-1/4" placeholder="base"
-                                type="number" name="" id="pentagon-base">
+                                class="outline-none ml-4 bg-gray-200 rounded-md px-3 py-1 w-1/4" placeholder="side"
+                                type="number" name="" id="pentagon-side">
                             <span class="ml-2">cm</span>
-                            <input onfocus="hideResult(this)"
+                            <!-- <input onfocus="hideResult(this)"
                                 class="outline-none ml-4 bg-gray-200 rounded-md px-3 py-1 w-1/4" placeholder="height"
-                                type="number" name="" id="pentagon-height">
-                            <span class="ml-2">cm</span>
+                                type="number" name="" id="pentagon-height"> 
+                            <span class="ml-2">cm</span> -->
                         </p>
                         <p class="opacity-0">Area : <span id="pentagon-area">0</span>cm<sup>2</sup> </p>
                         <div class="card-actions w-full mt-8">
@@ -169,7 +169,7 @@
                     </figure>
                     <div class="card-body items-center">
                         <h2 class="card-title ">Ellipse</h2>
-                        <p>Area (A) = πab</p>
+                        <p class="text-sm m-2">Area (A) = πab</p>
                         <p class="text-center">
                             <input onfocus="hideResult(this)"
                                 class="outline-none ml-4 bg-gray-200 rounded-md px-3 py-1 w-1/4" placeholder="axis"
@@ -189,8 +189,9 @@
                 </div>
             </div>
             <!-- Area Calculator -->
-            <div class=" xl:w-[400px] border-2 h-[400px] p-8 rounded-md">
+            <div class=" xl:w-[400px] border-2 h-[400px] p-8 rounded-md overflow-auto">
                 <h4 class="text-2xl underline text-center underline-offset-4">Area Calculator</h4>
+                <div id="calculation-entry" class="space-y-2 mt-2"></div>
             </div>
         </div>
     </main>
