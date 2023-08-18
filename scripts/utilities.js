@@ -22,7 +22,7 @@ function convertToMeter(target) {
     const areaInMeter = areaInCentiMeterNumber * .01;
     // console.log(areaInCentiMeterNumber, areaInMeter);
     target.parentElement.children[1].innerHTML = `
-        ${areaInMeter}m<sup>2</sup>
+        ${areaInMeter.toFixed(4)}m<sup>2</sup>
     `;
     target.setAttribute('disabled', 'true');
     // target.removeAttribute('onclick');
